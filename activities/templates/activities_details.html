@@ -4,7 +4,7 @@
     <h1>ACTYIVITY NAME : </h1> <h3>{{data.name}}</h3><br>
     <!-- <h1>DESTINATION ID : </h1> <h3>{{data.destination_id}}</h3><br> -->
     <img src="{{data.image}}" alt="{{data.name}}" height="300px" width="500px"><br>
-    <h1>DESCRIPTION : </h1> <p>{{data.description}}</p><br>
+    <h2>DESCRIPTION : </h2> <h4>{{data.description}}</h4><br>
     <h2>Available Destinations:-</h2>
     {% for i,data in ddata %}
         <a href="{% url 'ddet' i %}"><h3>{{ data }}</h3></a>
