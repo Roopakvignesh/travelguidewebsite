@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from destinations.datas import destinations_data
 activities_data = [ 
     # Goa Beach (id=1) 
     { 
@@ -168,7 +169,12 @@ def activities_details(request,id):
     for x in activities_data:
         if x['id']==id:
             data=x
+    ddata=[]
+    for destinations in destinations_data:
+        if destinations['id']==data['destination_id']:
+            ddata.append((destinations["id"],destinations['name']))
     context={
-        'data':data
+        'data':data,
+        'ddata':ddata,
     }
     return render(request,'activities_details.html',context)
