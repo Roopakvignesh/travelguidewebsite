@@ -1,0 +1,8 @@
+{% extends 'main.html' %}
+{% block content %}
+    <!-- <h1>ID : </h1> <h3>{{data.id}}</h3><br> -->
+    <h1>ACTYIVITY NAME : </h1> <h3>{{data.name}}</h3><br>
+    <!-- <h1>DESTINATION ID : </h1> <h3>{{data.destination_id}}</h3><br> -->
+    <img src="{{data.image}}" alt="{{data.name}}" height="300px" width="500px"><br>
+    <h1>DESCRIPTION : </h1> <p>{{data.description}}</p><br>
+{% endblock content %}
